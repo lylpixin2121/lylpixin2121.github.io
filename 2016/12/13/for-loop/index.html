@@ -3,17 +3,54 @@
 <head>
   <meta charset="utf-8">
   
-  <title>李大莽的窝</title>
+  <title>for-loop | 李大莽的窝</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="看看能到什么时候">
-<meta property="og:type" content="website">
-<meta property="og:title" content="李大莽的窝">
-<meta property="og:url" content="http://lylpixin2121.github.io/index.html">
+  <meta name="description" content="for循环在ES5中有三种for循环，分别是：
+
+for循环
+for in循环
+forEach循环
+
+在ES6中有一种for循环,叫做：
+
+for of循环
+
+for循环for循环是最简单的一种循环方式，一般格式如下：
+123for(var i = 0, len = arr.length;i &amp;lt; len; i++)&amp;#123;	console.log(arr[i])&amp;#125;
+一般会考虑缓">
+<meta property="og:type" content="article">
+<meta property="og:title" content="for-loop">
+<meta property="og:url" content="http://lylpixin2121.github.io/2016/12/13/for-loop/index.html">
 <meta property="og:site_name" content="李大莽的窝">
-<meta property="og:description" content="看看能到什么时候">
+<meta property="og:description" content="for循环在ES5中有三种for循环，分别是：
+
+for循环
+for in循环
+forEach循环
+
+在ES6中有一种for循环,叫做：
+
+for of循环
+
+for循环for循环是最简单的一种循环方式，一般格式如下：
+123for(var i = 0, len = arr.length;i &amp;lt; len; i++)&amp;#123;	console.log(arr[i])&amp;#125;
+一般会考虑缓">
+<meta property="og:updated_time" content="2016-12-13T16:43:35.664Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="李大莽的窝">
-<meta name="twitter:description" content="看看能到什么时候">
+<meta name="twitter:title" content="for-loop">
+<meta name="twitter:description" content="for循环在ES5中有三种for循环，分别是：
+
+for循环
+for in循环
+forEach循环
+
+在ES6中有一种for循环,叫做：
+
+for of循环
+
+for循环for循环是最简单的一种循环方式，一般格式如下：
+123for(var i = 0, len = arr.length;i &amp;lt; len; i++)&amp;#123;	console.log(arr[i])&amp;#125;
+一般会考虑缓">
   
     <link rel="alternate" href="/atom.xml" title="李大莽的窝" type="application/atom+xml">
   
@@ -66,9 +103,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-for-loop" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-for-loop" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/12/13/for-loop/" class="article-date">
   <time datetime="2016-12-13T14:58:26.000Z" itemprop="datePublished">2016-12-13</time>
@@ -81,8 +116,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/13/for-loop/">for-loop</a>
+    <h1 class="article-title" itemprop="name">
+      for-loop
     </h1>
   
 
@@ -141,142 +176,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-krpano" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/12/krpano/" class="article-date">
-  <time datetime="2016-12-12T14:01:05.000Z" itemprop="datePublished">2016-12-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/12/krpano/">krpano</a>
-    </h1>
+    <a href="/2016/12/12/krpano/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">krpano</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="krpano中路径的问题"><a href="#krpano中路径的问题" class="headerlink" title="krpano中路径的问题"></a>krpano中路径的问题</h2><p>krpano中所有的元素的路径都是基于当前xml文件所设的相对位置，如：</p>
-<p>``</p>
-<layer name="mypic" url="sea.png" …="">
-
-<p>``<br>该图片地址是和layer本身所处的xml文件同级目录是才可以使用。</p>
-<p>我们可以采用一些url的一些特殊方式进行处理：</p>
-<p>当用相对路径作为url的地址的时候，url是相对于当前xml的地址，而并非住xml文件。</p>
-<p>为了使路径能够相对某些特别的预定义路径，可以在url路径中使用下面的占位符：</p>
-<p>%FIRSTXML% 第一个载入的xml文件路径</p>
-<p>%CURRENTXML% 当前载入的主xml文件路径（非嵌入式的文件）</p>
-<p>%SWFPATH%  swf文件路径</p>
-<p>%HTMLPATH% html文件的路径</p>
-<p>%BASEDIR%  使用basedir 相对于根目录的路径</p>
-<p>%$VARIABLE% 相对于某个krpano变量 但是必须提前定义</p>
-</layer>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://lylpixin2121.github.io/2016/12/12/krpano/" data-id="ciwnqngql0001r4v05v5vs3qy" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-I-want-to-say" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/01/I-want-to-say/" class="article-date">
-  <time datetime="2016-05-31T16:39:41.000Z" itemprop="datePublished">2016-06-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/01/I-want-to-say/">I want to  say</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="这是一个新的开始"><a href="#这是一个新的开始" class="headerlink" title="这是一个新的开始"></a>这是一个新的开始</h2><p>这是一个新的开始，希望一切都能好起来！Everything will be fine~</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://lylpixin2121.github.io/2016/06/01/I-want-to-say/" data-id="ciwnqngqi0000r4v0uw5hc36b" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/05/31/hello-world/" class="article-date">
-  <time datetime="2016-05-31T15:31:07.679Z" itemprop="datePublished">2016-05-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/31/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://lylpixin2121.github.io/2016/05/31/hello-world/" data-id="ciwnqngql0003r4v0vhasgfhb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
