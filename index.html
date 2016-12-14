@@ -55,9 +55,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS-каналы"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lylpixin2121.github.io"></form>
@@ -109,8 +109,7 @@
 <p>最后输出结果是：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure></p>
 <p>看似for in可以遍历数组，实际原理是数组也是一种对应，索引是作为对象的属性名而存在，所以这里如果用过typeof 来测试，会发现i返回的都是string类型。</p>
 <blockquote>
-<p>###那么问题来了length 也是数组的一种属性，为何它没有被循环遍历出来？</p>
-</blockquote>
+<h3 id="那么问题来了length-也是数组的一种属性，为何它没有被循环遍历出来？"><a href="#那么问题来了length-也是数组的一种属性，为何它没有被循环遍历出来？" class="headerlink" title="那么问题来了length 也是数组的一种属性，为何它没有被循环遍历出来？"></a>那么问题来了length 也是数组的一种属性，为何它没有被循环遍历出来？</h3></blockquote>
 <p>原因是：for in用一句话概括就是，<strong>for in可以遍历可枚举的自有属性和原型属性</strong>,length是不可以被枚举的自有属性，所以没有被枚举出来，同样的数组的其他一些原型属性方法，因为是内置方法，内置方法都是不可以被枚举的，所以也没有读取出来，但是用户自定义的原型属性是可以被枚举的，同时setter、getter存取器属性也是可以被枚举的，举例如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>];</span><br><span class="line"><span class="built_in">Array</span>.prototype.showName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125; </span><br><span class="line">a.name = <span class="string">"lalala"</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> a)&#123;<span class="built_in">console</span>.log(i)&#125;</span><br></pre></td></tr></table></figure>
 <p>最后输出结果是：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="comment">// 索引属性</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">name <span class="comment">//自有属性</span></span><br><span class="line">showName <span class="comment">//自定义的原型属性</span></span><br></pre></td></tr></table></figure></p>
@@ -149,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lylpixin2121.github.io/2016/12/13/for-loop/" data-id="ciwnqrjxa0002xov0bem2fhj3" class="article-share-link">Partager</a>
+      <a data-url="http://lylpixin2121.github.io/2016/12/13/for-loop/" data-id="ciwp3v82a0002m0v05xqmniuz" class="article-share-link">Поделиться</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js流程控制/">js流程控制</a></li></ul>
@@ -201,7 +200,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lylpixin2121.github.io/2016/12/12/krpano/" data-id="ciwnqrjwu0001xov0osauptsh" class="article-share-link">Partager</a>
+      <a data-url="http://lylpixin2121.github.io/2016/12/12/krpano/" data-id="ciwp3v81v0000m0v0yttx8nas" class="article-share-link">Поделиться</a>
       
       
     </footer>
@@ -238,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lylpixin2121.github.io/2016/06/01/I-want-to-say/" data-id="ciwnqrjwu0000xov0lml7rgr8" class="article-share-link">Partager</a>
+      <a data-url="http://lylpixin2121.github.io/2016/06/01/I-want-to-say/" data-id="ciwp3v82a0001m0v0v749q6fg" class="article-share-link">Поделиться</a>
       
       
     </footer>
@@ -283,7 +282,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lylpixin2121.github.io/2016/05/31/hello-world/" data-id="ciwnqrjxa0003xov0fjdi1qys" class="article-share-link">Partager</a>
+      <a data-url="http://lylpixin2121.github.io/2016/05/31/hello-world/" data-id="ciwp3v82q0005m0v0ijtkr12z" class="article-share-link">Поделиться</a>
       
       
     </footer>
@@ -303,7 +302,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Метки</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/js流程控制/">js流程控制</a></li></ul>
     </div>
@@ -313,7 +312,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Облако меток</h3>
     <div class="widget tagcloud">
       <a href="/tags/js流程控制/" style="font-size: 10px;">js流程控制</a>
     </div>
@@ -322,7 +321,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Архив</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
     </div>
@@ -332,7 +331,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Недавние записи</h3>
     <div class="widget">
       <ul>
         
@@ -365,7 +364,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 lylpixin2121<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Создано с помощью <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
