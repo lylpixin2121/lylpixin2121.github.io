@@ -3,18 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>I want to  say | 李大莽的窝</title>
+  <title>Nodejs整理（一）之概述 | 李大莽的窝</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是一个新的开始这是一个新的开始，希望一切都能好起来！Everything will be fine~">
+  <meta name="description" content="node中的全局对象和全局变量node中提供了一些全局对象 他们是所有模块都可以调用的
+全局对象
+global : 表示Node所有的全局环境，类似于浏览器的window对象。需要注意的是，node中的模块的全局变量都是该模块私有的，其他模块无法取到
+
+process：该对象表示Node所处的当前进程，允许开发者与该进程互动
+
+console：只想Node内置的console模块 提供命令行环境中">
 <meta property="og:type" content="article">
-<meta property="og:title" content="I want to  say">
-<meta property="og:url" content="http://lylpixin2121.github.io/2016/06/01/I-want-to-say/index.html">
+<meta property="og:title" content="Nodejs整理（一）之概述">
+<meta property="og:url" content="http://lylpixin2121.github.io/2016/12/22/nodeLearn/index.html">
 <meta property="og:site_name" content="李大莽的窝">
-<meta property="og:description" content="这是一个新的开始这是一个新的开始，希望一切都能好起来！Everything will be fine~">
-<meta property="og:updated_time" content="2016-05-31T16:41:16.397Z">
+<meta property="og:description" content="node中的全局对象和全局变量node中提供了一些全局对象 他们是所有模块都可以调用的
+全局对象
+global : 表示Node所有的全局环境，类似于浏览器的window对象。需要注意的是，node中的模块的全局变量都是该模块私有的，其他模块无法取到
+
+process：该对象表示Node所处的当前进程，允许开发者与该进程互动
+
+console：只想Node内置的console模块 提供命令行环境中">
+<meta property="og:updated_time" content="2016-12-22T15:04:18.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="I want to  say">
-<meta name="twitter:description" content="这是一个新的开始这是一个新的开始，希望一切都能好起来！Everything will be fine~">
+<meta name="twitter:title" content="Nodejs整理（一）之概述">
+<meta name="twitter:description" content="node中的全局对象和全局变量node中提供了一些全局对象 他们是所有模块都可以调用的
+全局对象
+global : 表示Node所有的全局环境，类似于浏览器的window对象。需要注意的是，node中的模块的全局变量都是该模块私有的，其他模块无法取到
+
+process：该对象表示Node所处的当前进程，允许开发者与该进程互动
+
+console：只想Node内置的console模块 提供命令行环境中">
   
     <link rel="alternate" href="/atom.xml" title="李大莽的窝" type="application/atom+xml">
   
@@ -67,10 +85,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-I-want-to-say" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-nodeLearn" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/06/01/I-want-to-say/" class="article-date">
-  <time datetime="2016-05-31T16:39:41.000Z" itemprop="datePublished">2016-06-01</time>
+    <a href="/2016/12/22/nodeLearn/" class="article-date">
+  <time datetime="2016-12-22T12:32:03.000Z" itemprop="datePublished">2016-12-22</time>
 </a>
     
   </div>
@@ -81,7 +99,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      I want to  say
+      Nodejs整理（一）之概述
     </h1>
   
 
@@ -89,12 +107,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="这是一个新的开始"><a href="#这是一个新的开始" class="headerlink" title="这是一个新的开始"></a>这是一个新的开始</h2><p>这是一个新的开始，希望一切都能好起来！Everything will be fine~</p>
+        <h2 id="node中的全局对象和全局变量"><a href="#node中的全局对象和全局变量" class="headerlink" title="node中的全局对象和全局变量"></a>node中的全局对象和全局变量</h2><p>node中提供了一些全局对象 他们是所有模块都可以调用的</p>
+<h3 id="全局对象"><a href="#全局对象" class="headerlink" title="全局对象"></a>全局对象</h3><ul>
+<li><p>global : 表示Node所有的全局环境，类似于浏览器的window对象。需要注意的是，node中的模块的全局变量都是该模块私有的，其他模块无法取到</p>
+</li>
+<li><p>process：该对象表示Node所处的当前进程，允许开发者与该进程互动</p>
+</li>
+<li><p>console：只想Node内置的console模块 提供命令行环境中的标准输入输出功能</p>
+</li>
+</ul>
+<h3 id="全局函数"><a href="#全局函数" class="headerlink" title="全局函数"></a>全局函数</h3><ul>
+<li>setTimeout() clearTimeout() setInerval() clearInterval()</li>
+<li>require() 模块加载函数</li>
+<li>Buffer() 用于操作二进制数据</li>
+</ul>
+<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>node提供了两个全局变量,都是以两个下划线开头。</p>
+<ul>
+<li>__dirname : 只想当前运行的脚本所在目录</li>
+<li>__filename : 指向当前运行的脚本文件名</li>
+</ul>
+<p>除此之外 还有一些对象实际上是模块内部的局部变量，指向的对象根据模块不同而不同 但是所有模块都适用，可以看做是伪全局变量，主要是module module.exports exports等</p>
+<p>PS:这里注意一点,exports 是module.exports的一个引用，require函数最终输出的是module.exports的内容，所以如果同时定义两个，那么起作用的module.exports,所以经常为了减少混淆很多人习惯的写法是：<br><code>exports = module.exports = xxx</code></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lylpixin2121.github.io/2016/06/01/I-want-to-say/" data-id="cix0cpgcv0001twv0hk7hnptp" class="article-share-link">Share</a>
+      <a data-url="http://lylpixin2121.github.io/2016/12/22/nodeLearn/" data-id="cix0cpgcf0000twv0ktkrwzhi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -103,19 +141,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/12/12/krpano/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          krpano
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/31/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/12/13/for-loop/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">for-loop</div>
     </a>
   
 </nav>
